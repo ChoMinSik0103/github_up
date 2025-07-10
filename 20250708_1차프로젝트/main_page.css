@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, body, input, button, textarea, select, label {
+    color: rgba(0, 0, 0, 0.712);
+    font-family: 'Cafe24Ssurround', sans-serif;
+}
+
+html, body {
+    width: 95%;
+    height: 95%;
+    margin: 20px;
+    overflow: auto;         /* hidden or auto */
+
+    display: flex;
+    flex-direction: column; /* 요소를 위에서 아래로 배치 */
+    align-items: center;    /* 수평 중앙 정렬 */
+}
+
+#title_part {
+    flex : 1;
+    width: 80%;
+    height: 60px;
+    background-color: rgb(111, 246, 228);
+
+    font-size: 36px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 10px; 
+}
+
+#body_part {
+    width: 50%;
+    padding: 20px;
+    
+    height: 80%;
+    background-color: rgb(111, 246, 228);
+    margin-top: 10px;
+
+    font-size: 30px;
+    border-radius: 10px;
+    
+    overflow-y: auto;           /* 세로 스크롤 허용 */
+
+    display: flex;
+    flex-direction: column;     
+    align-items: center;        
+    justify-content: center;    
+    text-align: center;
+    
+    background-image: url('/data/img/이미지1.png');
+    background-size : 50% 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#labelMsg1 {
+    margin-top: 60%;
+}
+
+#message_part {
+    width: 80%;
+    height: 60px;
+    background-color: rgb(111, 246, 228);
+
+    font-size: 36px;
+    border-radius: 10px;
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+#text_input {
+    flex: 1;
+    height: 40px;
+    font-size: 18px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    width: 45px;
+    height: 45px;
+    
+    background-color: rgb(212, 245, 189);
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+

@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, input, button {
+    color: rgba(0, 0, 0, 0.712);
+    font-family: 'Cafe24Ssurround', sans-serif;
+}
+
+html, body {
+    width: 95%;
+    height: 95%;
+    margin: 20px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#title_part {
+    width: 80%;
+    height: 60px;
+    padding: 0 10px;
+    background-color: rgb(111, 246, 228);
+    font-size: 36px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-container {
+    width: 40%;
+    height: 30%;
+    display: flex;
+    justify-content: center;  /* 수평 중앙 정렬 */
+    align-items: center;      /* 수직 중앙 정렬 */
+
+    margin: 10%;
+    padding: 30px;
+
+    background-color: #a0fff0;
+}
+
+.form-container form > * {
+    margin-bottom: 25px;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#home_button {
+    width: 45px;
+    height: 45px;
+
+    background-color: rgb(212, 245, 189);
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#login_button {
+    width: 100px;
+    height: 40px;
+}

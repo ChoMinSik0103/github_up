@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입</title>
+
+  <link rel="stylesheet" href="member_join.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>회원가입</h2>
+    <form>
+        <label for="phone">전화번호</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="home-address">집 주소(상세주소 제외)</label>
+        <input type="text" id="home-address" name="home-address" required>
+
+        <label for="company-address">회사 주소(상세주소 제외)</label>
+        <input type="text" id="company-address" name="company-address">
+
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="age-range">연령대</label>
+        <select id="age-range" name="age-range" required>
+        <option>10대</option>
+        <option>20대</option>
+        <option>30대</option>
+        <option>40대</option>
+        <option>50대 이상</option>
+        </select>
+
+        <label>자녀</label>
+
+        <div class="child-age">
+            <select name="child1">
+                <option value="">연령대 -</option>
+                <option>유아</option>
+                <option>초등</option>
+                <option>중등</option>
+                <option>고등</option>
+            </select>
+            <select name="child2">
+                <option value="">연령대 -</option>
+                <option>유아</option>
+                <option>초등</option>
+                <option>중등</option>
+                <option>고등</option>
+            </select>
+        </div>
+
+        <label for="hospital">자주 가는 병원</label>
+        <div class="hospital-group">
+            <input type="text"  id="hospital1">
+            <input type="text"  id="hospital2">
+        </div>
+        
+        <div class="button-group">
+        <button type="submit" id="submitBtn">확인</button>
+        <button type="reset" id="resetBtn">취소</button>
+        <button type="button" id="homeBtn">홈으로</button>
+        </div>
+    </form>
+  </div>
+</body>
+
+<script>
+    const $form = document.querySelector("form");
+    const $homeBtn=document.getElementById('homeBtn');
+
+    $form.addEventListener("submit", function(e) {
+        e.preventDefault();  // 기본 폼 제출 막기
+
+        const phone = document.getElementById("phone").value.trim();
+        const homeAddress = document.getElementById("home-address").value.trim();
+        const companyAddress = document.getElementById("company-address").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const ageRange = document.getElementById("age-range").value;
+
+        const childSelects = document.querySelectorAll(".child-age select");
+        const children = Array.from(childSelects).map(sel => sel.value).filter(v => v !== "").join(", ") || "없음";
+
+        const hospital1 = document.getElementById("hospital1").value.trim();
+        const hospital2 = document.getElementById("hospital2").value.trim();
+        const hospitals = [hospital1, hospital2].filter(v => v !== "").join(", ") || "없음";
+
+        const message = `
+            전화번호: ${phone}
+            집 주소: ${homeAddress}
+            회사 주소: ${companyAddress}
+            이메일: ${email}
+            연령대: ${ageRange}
+            자녀 연령대: ${children}
+            자주 가는 병원: ${hospitals}
+        `;
+
+        alert(message);
+        alert('가입되었습니다.');
+        window.location.href = "main_page.html";
+    });
+
+    $homeBtn.addEventListener("click", function () {
+        window.location.href = 'main_page.html';
+    });
+
+</script>
+
+</html>
